@@ -49,4 +49,19 @@ public class RestAssuredExtension {
         Request.body(body);
         return Request.post(url);
     }
+
+    public static ResponseOptions<Response> PostOpsWithBody(String url,Map<String, String> body)  {
+        Request.body(body);
+        return Request.post(url);
+    }
+
+    public static ResponseOptions<Response> DeleteOpsWithPathParams(String url,Map<String, String> pathParams)  {
+        Request.pathParams(pathParams);
+        return Request.delete(url);
+    }
+
+    public static ResponseOptions<Response> GetWithPathParams(String url,Map<String, String> pathParams)  {
+        Request.pathParams(pathParams);
+        return Request.get(url);
+    }
 }
